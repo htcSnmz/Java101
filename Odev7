@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Odev7 {
+    public static void main(String[] args) {
+        double perPear = 2.14, perApple = 3.67, perTomatoes = 1.11, perBanana = 0.95, perEggplant = 5.0;
+        double kg, total = 0.0;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Armut kaç kilo? : ");
+        kg = input.nextDouble();
+        total += (kg * perPear);
+
+        System.out.print("Elma kaç kilo? : ");
+        kg = input.nextDouble();
+        total += (kg * perApple);
+
+        System.out.print("Domates kaç kilo? : ");
+        kg = input.nextDouble();
+        total += (kg * perTomatoes);
+
+        System.out.print("Muz kaç kilo? : ");
+        kg = input.nextDouble();
+        total += (kg * perBanana);
+
+        System.out.print("Patlıcan kaç kilo? : ");
+        kg = input.nextDouble();
+        total += (kg * perEggplant);
+
+        System.out.println("Toplam tutar = " + total);
+    }
+}
