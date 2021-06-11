@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Odev6 {
+    public static void main(String[] args) {
+        double weight, length, bmi;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen boyunuzu metre cinsinden giriniz: ");
+        length = input.nextDouble();
+        System.out.print("Lütfen kilonuzu giriniz: ");
+        weight = input.nextDouble();
+        bmi = weight / (length * length);
+        System.out.println("Vücut kitle indeksiniz : " + bmi);
+    }
+}
