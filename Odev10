@@ -1,0 +1,62 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+public class Odev10 {
+    public static void main(String[] args) {
+        int mat, fizik, turkce, kimya, muzik, total = 0, count = 0;
+        double avarage;
+
+        Scanner inp = new Scanner(System.in);
+
+        System.out.print("Matematik notunuzu giriniz: ");
+        mat = inp.nextInt();
+        if(mat > 0 && mat <= 100){
+            total += mat;
+            count++;
+        }
+
+        System.out.print("Türkçe notunuzu giriniz: ");
+        turkce = inp.nextInt();
+        if(turkce > 0 && turkce <= 100){
+            total += turkce;
+            count++;
+        }
+
+        System.out.print("Müzik notunuzu giriniz: ");
+        muzik = inp.nextInt();
+        if(muzik > 0 && muzik <= 100){
+            total += muzik;
+            count++;
+        }
+
+        System.out.print("Kimya notunuzu giriniz: ");
+        kimya = inp.nextInt();
+        if(kimya > 0 && kimya <= 100){
+            total += kimya;
+            count++;
+        }
+
+        System.out.print("Fizik notunuzu giriniz: ");
+        fizik = inp.nextInt();
+        if(fizik > 0 && fizik <= 100){
+            total += fizik;
+            count++;
+        }
+
+        if(count !=0 ){
+            avarage = total / count;
+            System.out.println("Ortalamanız = " +  avarage);
+
+            if(avarage <= 55){
+                System.out.println("Sınıfta kaldınız.");
+            }else{
+                System.out.println("Geçtiniz.");
+            }
+        }else{
+            System.out.println("Ortalama alınamaz. 0  ile 100 arasında not giriniz.");
+        }
+
+
+
+    }
+}
