@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Odev9 {
+    public static void main(String[] args) {
+        String trueUserName = "patika", truePassword = "java123", userName, password, select;
+
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Kullanıcı adınızı giriniz: ");
+        userName = inp.nextLine();
+        System.out.print("Şifrenizi giriniz: ");
+        password = inp.nextLine();
+
+        if(userName.equals(trueUserName) && password.equals(truePassword)){
+            System.out.println("Giriş yaptınız.");
+        }else{
+            System.out.print("Hatalı giriş. Şifrenizi sıfırlamak istiyorsanız 'EVET' yazınız: ");
+            select = inp.nextLine();
+            if(select.equals("EVET")){
+                System.out.print("Yeni şifrenizi giriniz: ");
+                password = inp.next();
+                if(password.equals(truePassword)){
+                    System.out.println("Şifreniz eski şifre ile aynı olamaz. Tekrar deneyiniz.");
+                }else{
+                    System.out.println("Şifre oluşturuldu.");
+                }
+            }else{
+                System.out.println("Programdan çıkıldı.");
+            }
+        }
+    }
+
+
+}
