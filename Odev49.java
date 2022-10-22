@@ -1,3 +1,4 @@
+//Java dilinde kullanıcının girdiği kelimenin "Palindromik" olup olmadığı bulan bir program yazıyoruz.
 package com.company;
 
 public class Odev49 {
